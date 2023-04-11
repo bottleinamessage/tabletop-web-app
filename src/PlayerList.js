@@ -29,7 +29,7 @@ export const PlayerList = ({ players, onRemovePlayer }) => {
                                 <ListItem listStyleType="none" key={index}>
                                     {player.name} <Button colorScheme="red" variant="outline" onClick={() => onRemovePlayer(index)}>X</Button>
                                 </ListItem>
-                            ))}
+                            ))};
                         </OrderedList>
                     </Box>
                 </CardBody>

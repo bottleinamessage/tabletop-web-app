@@ -4,13 +4,14 @@ import { Card, CardHeader, CardBody, CardFooter, Heading } from '@chakra-ui/reac
 
 
 // Component for homepage player form
-export const PlayerForm = ({onAddPlayer}) => {
+export const PlayerForm = ({onAddPlayer, startGame}) => {
     // state variable that contains an array of objects (players) storing player name
     const [playerName, setPlayerName] = useState("");
 
     // On Form Submit
     const handleSubmit = (event) => {
         event.preventDefault();
+
         onAddPlayer({ name: playerName }); // Add player
         setPlayerName(""); // Clear after form submission
     };
@@ -40,6 +41,12 @@ export const PlayerForm = ({onAddPlayer}) => {
                                 null
                             ) : (
                                 <FormErrorMessage>Username required</FormErrorMessage>
+                            )}
+
+                            { startGame && (
+                                <Button type="button" onClick={startGame}>
+                                    Start
+                                </Button>
                             )}
 
                         </FormControl>
