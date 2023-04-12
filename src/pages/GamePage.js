@@ -18,6 +18,10 @@ export const GamePage = ({ players }) => {
         setCurrentPlayerIndex((currentPlayerIndex + 1) % players.length);
       };
 
+
+
+ 
+
       return (
 
         <>
